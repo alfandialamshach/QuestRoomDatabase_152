@@ -4,6 +4,7 @@ import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
+import androidx.room.Update
 import com.example.project7.data.entity.Mahasiswa
 import kotlinx.coroutines.flow.Flow
 
@@ -25,5 +26,6 @@ interface MahasiswaDao {
     suspend fun deleteMahasiswa(mahasiswa: Mahasiswa)
 
     //UpdateMahasiswa
+    @Update
     suspend fun updateMahasiswa(mahasiswa: Mahasiswa)
 }

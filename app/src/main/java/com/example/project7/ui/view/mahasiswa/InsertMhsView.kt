@@ -47,7 +47,8 @@ fun InsertMhsView(
     onBack: () -> Unit,
     onNavigate: () -> Unit,
     modifier: Modifier =Modifier,
-    viewModel: MahasiswaViewModel = viewModel(factory = PenyediaViewModel.Factory)  // Inisialisasi View Model
+    viewModel: MahasiswaViewModel = viewModel(factory = PenyediaViewModel.Factory),  // Inisialisasi View Model
+
 ){
     val  uiState = viewModel.uiState // Ambil UI state dari view model
     val snackbarHostState = remember { SnackbarHostState() } //snackbar state
@@ -203,6 +204,7 @@ fun FormMahasiswa(
             modifier = Modifier.fillMaxWidth()
         ) {
             kelas.forEach { kelas ->
+
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.Start
